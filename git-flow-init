@@ -355,7 +355,9 @@ file=    use given config file
 		git_do config $gitflow_config_option gitflow.path.hooks "$hooks_dir"
 	fi
 
-	# TODO: what to do with origin?
+	# ADD Git flow hooks to repo
+	rm -rf .git/hooks
+	git clone https://github.com/renzelagentur/git-flow-hooks.git .git/hooks
 }
 
 cmd_help() {
